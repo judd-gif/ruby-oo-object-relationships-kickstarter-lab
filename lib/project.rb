@@ -1,6 +1,7 @@
+require 'pry'
 class Project
 
-    attr_reader :backers, :title
+    attr_reader :title, :backers
 
 def initialize (title)
 @backers = []    
@@ -8,7 +9,9 @@ def initialize (title)
 end
 
  def add_backer(backer)
+    ProjectBacker.new(self, backer)
     @backers << backer
+    
   end
 
 end
