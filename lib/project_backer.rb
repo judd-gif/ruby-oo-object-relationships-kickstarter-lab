@@ -1,15 +1,14 @@
 class ProjectBacker
 
-    attr_accessor :title, name
     attr_reader :backer, :project
 
 
 @@all = []
 
 
-def initialize (title, name)
-@title = title
-@name = name
+def initialize (project, backer)
+@project = project
+@backer = backer
 @@all << self
 end
 
